@@ -1,12 +1,15 @@
+# used by the data pipeline in this repo (SNRDataset.py, pack_dataset.py, tools/, tests/)
 numpy
 torch
-torchvision
 pillow
+tqdm
 matplotlib
+
+# not used by the data pipeline code here (model, training and evaluation work)
+torchvision
 scipy
 scikit-image
 opencv-python
-tqdm
 tensorboard
 pyyaml
 trimesh
