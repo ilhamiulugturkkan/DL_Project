@@ -1,3 +1,5 @@
 /cars_train
 .venv
 .DS_Store
+/alpha_check
+__pycache__/
