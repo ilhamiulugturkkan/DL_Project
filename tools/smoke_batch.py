@@ -10,7 +10,7 @@ from pathlib import Path
 from torch.utils.data import DataLoader
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from SNRDataset import DLDataset, PackedDataset
+from SRNDataset import DLDataset, PackedDataset
 
 
 def main():

@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from SNRDataset import txt_to_matrix, EXCLUDED_OBJECTS
+from SRNDataset import txt_to_matrix, EXCLUDED_OBJECTS
 
 ROOT = Path(__file__).resolve().parent.parent / "cars_train"
 TOL = 1e-5   # poses are float32 written as text, measured errors are ~1e-6

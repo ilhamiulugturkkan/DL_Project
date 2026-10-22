@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pack_dataset
 from pack_dataset import pack
-from SNRDataset import PackedDataset
+from SRNDataset import PackedDataset
 from test_loader import OBJS, VIEWS, DIRS, RADIUS, pose_text, read_image, read_direction
 
 ROOT = Path(__file__).resolve().parent.parent / "cars_train"

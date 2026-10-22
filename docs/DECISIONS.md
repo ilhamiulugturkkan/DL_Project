@@ -78,7 +78,7 @@ poses but only 142 rgb files, and it is the only one of 2,151. Without a fix, dr
 in a DataLoader worker about two times in three.
 
 **Choice, two layers:**
-- an **exclusion list** (`EXCLUDED_OBJECTS` in `SNRDataset.py`) that drops the car by name. It is the only way a car can be skipped, so nothing disappears silently, and the manifest records the list used;
+- an **exclusion list** (`EXCLUDED_OBJECTS` in `SRNDataset.py`) that drops the car by name. It is the only way a car can be skipped, so nothing disappears silently, and the manifest records the list used;
 - `DLDataset` builds each car's view list from the **names present in both** `pose/` and `rgb/`, and asserts at least 2 views.
 
 The packer is stricter than the loader: for every car it requires the two name lists to be identical and fails otherwise.

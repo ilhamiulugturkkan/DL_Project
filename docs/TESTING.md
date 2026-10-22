@@ -12,7 +12,7 @@ if any test fails. The test functions are plain `test_*` functions with asserts,
 | Situation | Run |
 |---|---|
 | I just packed a split and want to know it is right | `tests/equivalence.py`, then `tests/test_pack.py` |
-| I changed the loader (`SNRDataset.py`) | `tests/test_loader.py`, `tests/equivalence.py` |
+| I changed the loader (`SRNDataset.py`) | `tests/test_loader.py`, `tests/equivalence.py` |
 | I changed the packer (`pack_dataset.py`) | `tests/test_pack.py`, then pack a few cars with `--limit` and run `tests/equivalence.py` on the real pack |
 | I got new or re-downloaded raw data | `tests/test_data.py` |
 | Everything, before a release or a long training run | the loop below, about 1.5 minutes |

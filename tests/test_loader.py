@@ -13,7 +13,7 @@ from PIL import Image
 from torch.utils.data import DataLoader, Subset
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from SNRDataset import DLDataset, PackedDataset
+from SRNDataset import DLDataset, PackedDataset
 from pack_dataset import pack
 
 ROOT = Path(__file__).resolve().parent.parent / "cars_train"

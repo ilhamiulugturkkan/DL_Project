@@ -17,7 +17,7 @@ from PIL import Image
 
 HERE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(HERE))
-from SNRDataset import load_rgb
+from SRNDataset import load_rgb
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--root", default=str(HERE / "cars_train"))

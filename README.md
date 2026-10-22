@@ -41,7 +41,7 @@ Use it in training:
 
 ```python
 from torch.utils.data import DataLoader
-from SNRDataset import PackedDataset
+from SRNDataset import PackedDataset
 
 ds = PackedDataset("packed", split="train")
 loader = DataLoader(ds, batch_size=32, shuffle=True, num_workers=4, persistent_workers=True)
@@ -49,7 +49,7 @@ for src_img, tgt_img, d_pose, obj_id in loader:
     ...
 ```
 
-Run Python from the project root (or put it on `PYTHONPATH`) so that `import SNRDataset` works.
+Run Python from the project root (or put it on `PYTHONPATH`) so that `import SRNDataset` works.
 
 ## What to run to do what
 
@@ -72,7 +72,7 @@ Every test file prints `PASS` / `FAIL` per test and exits non-zero on a failure.
 ## What is in this repository
 
 ```
-SNRDataset.py        the datasets: PackedDataset (fast, use for training) and DLDataset (original files, the reference)
+SRNDataset.py        the datasets: PackedDataset (fast, use for training) and DLDataset (original files, the reference)
 pack_dataset.py      builds the packed arrays from a raw split, with strict checks
 requirements.txt     Python packages
 docs/
@@ -95,7 +95,7 @@ packed/              built arrays (not in git)
 outputs/             generated pictures (not in git)
 ```
 
-`SNRDataset.py` and `pack_dataset.py` stay in the project root because they are the two things other code imports or runs.
+`SRNDataset.py` and `pack_dataset.py` stay in the project root because they are the two things other code imports or runs.
 
 ## Key decisions
 
@@ -129,7 +129,7 @@ The full list with reasons is in [docs/DECISIONS.md](docs/DECISIONS.md). In shor
 
 ## Known issues
 
-- **Car `4cce557de0c31a0e70a43c2d978e502e` is broken**: 250 poses but only 142 rgb files. It is listed in `EXCLUDED_OBJECTS` in `SNRDataset.py`, and the packer and tests skip it by that list. It is the only such car of 2,151.
+- **Car `4cce557de0c31a0e70a43c2d978e502e` is broken**: 250 poses but only 142 rgb files. It is listed in `EXCLUDED_OBJECTS` in `SRNDataset.py`, and the packer and tests skip it by that list. It is the only such car of 2,151.
 - **Validation and test pairs are still random.** `__getitem__` draws a new pair on every call, which is right for training only. Evaluation needs fixed pairs.
 - **The `alpha` channel is 255 everywhere**, so the images are effectively RGB with a white background already baked in. Compositing on white changes nothing on this data; it is kept (and checked) so the pipeline would still be correct if that ever changed.
 - Other open points are listed at the end of [docs/DECISIONS.md](docs/DECISIONS.md).

@@ -1,4 +1,4 @@
-# used by the data pipeline in this repo (SNRDataset.py, pack_dataset.py, tools/, tests/)
+# used by the data pipeline in this repo (SRNDataset.py, pack_dataset.py, tools/, tests/)
 numpy
 torch
 pillow

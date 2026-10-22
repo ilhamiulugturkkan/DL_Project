@@ -26,7 +26,7 @@ A pose file reads as
 where `(c1, c2, c3) = pose[:3, 3]` is the camera position. The camera is 1.3 from the origin, looks at the origin
 (`R[:, 2] = -position / |position|`) and the world z axis is up.
 
-Folders whose name starts with `.` are ignored. The cars listed in `EXCLUDED_OBJECTS` (`SNRDataset.py`) are skipped.
+Folders whose name starts with `.` are ignored. The cars listed in `EXCLUDED_OBJECTS` (`SRNDataset.py`) are skipped.
 
 ## Packed split (output of `pack_dataset.py`)
 
@@ -90,7 +90,7 @@ Any failure stops the run and names the car (and view). The only way a car is le
 
 ## Datasets
 
-Both live in `SNRDataset.py` and return the same item: `(src_img [3, 64, 64], tgt_img [3, 64, 64], d_pose [6], obj_id)`,
+Both live in `SRNDataset.py` and return the same item: `(src_img [3, 64, 64], tgt_img [3, 64, 64], d_pose [6], obj_id)`,
 float32 images in `[-1, 1]`, `d_pose` = source direction then target direction, `obj_id` the car's name.
 
 | | `PackedDataset(packed_dir, split="train")` | `DLDataset(path)` |

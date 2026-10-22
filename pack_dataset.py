@@ -16,7 +16,7 @@ import numpy as np
 from PIL import Image
 from tqdm import tqdm
 
-from SNRDataset import EXCLUDED_OBJECTS, txt_to_matrix, get_cam_unit_vector
+from SRNDataset import EXCLUDED_OBJECTS, txt_to_matrix, get_cam_unit_vector
 
 SRC_SIZE = 128
 OUT_SIZE = 64
