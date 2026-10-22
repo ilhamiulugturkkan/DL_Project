@@ -1,5 +1,12 @@
+# the dataset (3.3 GB) and the packed arrays built from it (6.6 GB for train)
 /cars_train
+/cars_val
+/cars_test
+/packed
+
+# generated pictures from tools/check_alpha.py and tools/check_grid.py
+/outputs
+
 .venv
 .DS_Store
-/alpha_check
 __pycache__/
